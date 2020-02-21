@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1582312279768" clover="3.2.0">
-  <project timestamp="1582312279768" name="All files">
-    <metrics statements="63" coveredstatements="35" conditionals="11" coveredconditionals="1" methods="12" coveredmethods="5" elements="86" coveredelements="41" complexity="0" loc="63" ncloc="63" packages="5" files="6" classes="6"/>
+<coverage generated="1582314718368" clover="3.2.0">
+  <project timestamp="1582314718369" name="All files">
+    <metrics statements="68" coveredstatements="40" conditionals="11" coveredconditionals="1" methods="13" coveredmethods="6" elements="92" coveredelements="47" complexity="0" loc="68" ncloc="68" packages="6" files="7" classes="7"/>
     <package name="lib">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="app.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-BE/lib/app.js">
@@ -71,13 +71,24 @@
       </file>
     </package>
     <package name="lib.routes">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="callback.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-BE/lib/routes/callback.js">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="lib.services">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="getAccessToken.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-BE/lib/services/getAccessToken.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
       </file>
     </package>
     <package name="lib.utils">
