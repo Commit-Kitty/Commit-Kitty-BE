@@ -3,8 +3,7 @@ const { getUser, devAgent, adminAgent } = require('../lib/helpers/data-helpers')
 const request = require('supertest');
 const app = require('../lib/app');
 
-describe('app routes', () => {
-
+describe('tests of user model routes', () => {
   it('can signup a user', () => {
     return request(app)
       .post('/api/v1/auth/signup')
@@ -45,7 +44,6 @@ describe('app routes', () => {
       });
   });
 
-
   it('fails to login a user with a bad email', async() => {
     await getUser();
     return request(app)
@@ -73,7 +71,6 @@ describe('app routes', () => {
         });
       });
   });
-
 
   it('can verify a logged in user', async() => {
     const user = await getUser({ email: 'dev0@tess.com' });
@@ -115,5 +112,3 @@ describe('app routes', () => {
   });
 
 });
-
-
