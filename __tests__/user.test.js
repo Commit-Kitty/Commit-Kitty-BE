@@ -29,6 +29,7 @@ describe('app routes', () => {
         role: 'Admin'
       })
       .then(res => {
+        expect(res.header['set-cookie'][0]).toEqual(expect.stringContaining('session='));
         expect(res.body).toEqual({
           _id: expect.any(String),
           userName: 'joel',
