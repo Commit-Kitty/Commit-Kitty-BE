@@ -11,6 +11,17 @@ describe('app routes', () => {
     connect();
   });
 
+  let admin;
+
+  beforeEach(async() => {
+    admin = await User.create({
+      email: 'calvin@coolidge.com',
+      userName: 'Bobert',
+      password: 'secret',
+      role: 'Admin'
+    });
+  });
+
   beforeEach(() => {
     return mongoose.connection.dropDatabase();
   });
@@ -34,6 +45,21 @@ describe('app routes', () => {
           _id: expect.any(String),
           userName: 'joel',
           email: 'joel@joel.com',
+          role: 'Admin',
+          __v: 0
+        });
+      });
+  });
+
+  it('can login a user', () => {
+    return request(app)
+      .post('api/v1/auth/login')
+      .send(admin)
+      .then(res => {
+        expect(res.body).toEqual({
+          _id: admin.id,
+          userName: 'Bobert',
+          email: 'calvin@coolidge.com',
           role: 'Admin',
           __v: 0
         });
