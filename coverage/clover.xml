@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1582321778678" clover="3.2.0">
-  <project timestamp="1582321778678" name="All files">
-    <metrics statements="127" coveredstatements="113" conditionals="17" coveredconditionals="11" methods="35" coveredmethods="32" elements="179" coveredelements="156" complexity="0" loc="127" ncloc="127" packages="6" files="9" classes="9"/>
+<coverage generated="1582322164917" clover="3.2.0">
+  <project timestamp="1582322164918" name="All files">
+    <metrics statements="132" coveredstatements="113" conditionals="19" coveredconditionals="12" methods="37" coveredmethods="33" elements="188" coveredelements="158" complexity="0" loc="132" ncloc="132" packages="6" files="9" classes="9"/>
     <package name="lib">
       <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="app.js" path="/Users/aaronglenn/alchemy/career-track/Commit-Kitty/Commit-Kitty-BE/lib/app.js">
@@ -57,26 +57,26 @@
       </file>
     </package>
     <package name="lib.middleware">
-      <metrics statements="32" coveredstatements="25" conditionals="10" coveredconditionals="7" methods="6" coveredmethods="6"/>
+      <metrics statements="32" coveredstatements="22" conditionals="10" coveredconditionals="7" methods="6" coveredmethods="5"/>
       <file name="ensureAuth.js" path="/Users/aaronglenn/alchemy/career-track/Commit-Kitty/Commit-Kitty-BE/lib/middleware/ensureAuth.js">
         <metrics statements="20" coveredstatements="14" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
         <line num="13" count="2" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="18" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="18" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="19" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
         <line num="29" count="1" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
         <line num="33" count="1" type="stmt"/>
@@ -85,19 +85,19 @@
         <metrics statements="8" coveredstatements="7" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="7" count="4" type="cond" truecount="3" falsecount="1"/>
+        <line num="5" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="3" type="cond" truecount="3" falsecount="1"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="12" count="4" type="stmt"/>
-        <line num="14" count="4" type="stmt"/>
-        <line num="16" count="4" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
       </file>
       <file name="not-found.js" path="/Users/aaronglenn/alchemy/career-track/Commit-Kitty/Commit-Kitty-BE/lib/middleware/not-found.js">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
       </file>
     </package>
     <package name="lib.models">
@@ -108,13 +108,13 @@
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
-        <line num="27" count="38" type="stmt"/>
+        <line num="27" count="39" type="stmt"/>
         <line num="32" count="2" type="stmt"/>
         <line num="33" count="30" type="stmt"/>
         <line num="36" count="2" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
         <line num="47" count="0" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
         <line num="52" count="2" type="stmt"/>
@@ -135,9 +135,9 @@
       </file>
     </package>
     <package name="lib.routes">
-      <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+      <metrics statements="21" coveredstatements="19" conditionals="2" coveredconditionals="1" methods="9" coveredmethods="9"/>
       <file name="user.js" path="/Users/aaronglenn/alchemy/career-track/Commit-Kitty/Commit-Kitty-BE/lib/routes/user.js">
-        <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+        <metrics statements="21" coveredstatements="19" conditionals="2" coveredconditionals="1" methods="9" coveredmethods="9"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -154,6 +154,11 @@
         <line num="34" count="1" type="stmt"/>
         <line num="40" count="1" type="stmt"/>
         <line num="43" count="1" type="stmt"/>
+        <line num="47" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
       </file>
     </package>
     <package name="lib.utils">
