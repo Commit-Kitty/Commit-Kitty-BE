@@ -59,18 +59,39 @@ describe('app routes', () => {
         });
       });
   });
-});
-    
-it('fails to login a user with a bad password', async() => {
-  await getUser();
-  return request(app)
-    .post('/api/v1/auth/login')
-    .send({ email: 'user@tess.com', password: 'notright' })
-    .then(res => {
-      expect(res.status).toEqual(401);
-      expect(res.body).toEqual({
-        status: 401,
-        message: 'Invalid Email or Password'
+  
+  it('fails to login a user with a bad password', async() => {
+    await getUser();
+    return request(app)
+      .post('/api/v1/auth/login')
+      .send({ email: 'user@tess.com', password: 'notright' })
+      .then(res => {
+        expect(res.status).toEqual(401);
+        expect(res.body).toEqual({
+          status: 401,
+          message: 'Invalid Email or Password'
+        });
       });
-    });
+  });
+
+
+  it('can verify a logged in user', async() => {
+    const user = await getUser({ email: 'dev0@tess.com' });
+    return devAgent
+      .get('/api/v1/auth/verify')
+      .then(res => {        
+        expect(res.body).toEqual({
+          _id: expect.any(String),
+          userName: user.userName,
+          email: user.email,
+          role: 'Dev',
+          __v: 0
+        });
+      });
+  });
+
+
+
 });
+
+
