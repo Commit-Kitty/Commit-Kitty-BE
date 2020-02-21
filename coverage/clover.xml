@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1582314718368" clover="3.2.0">
-  <project timestamp="1582314718369" name="All files">
-    <metrics statements="68" coveredstatements="40" conditionals="11" coveredconditionals="1" methods="13" coveredmethods="6" elements="92" coveredelements="47" complexity="0" loc="68" ncloc="68" packages="6" files="7" classes="7"/>
+<coverage generated="1582322798590" clover="3.2.0">
+  <project timestamp="1582322798590" name="All files">
+    <metrics statements="76" coveredstatements="48" conditionals="11" coveredconditionals="1" methods="15" coveredmethods="8" elements="102" coveredelements="57" complexity="0" loc="76" ncloc="76" packages="6" files="7" classes="7"/>
     <package name="lib">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="app.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-BE/lib/app.js">
@@ -71,15 +71,23 @@
       </file>
     </package>
     <package name="lib.routes">
-      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="callback.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-BE/lib/routes/callback.js">
-        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
       </file>
     </package>
     <package name="lib.services">
