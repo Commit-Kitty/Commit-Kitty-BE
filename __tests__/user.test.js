@@ -11,17 +11,6 @@ describe('app routes', () => {
     connect();
   });
 
-  let admin;
-
-  beforeEach(async() => {
-    admin = await User.create({
-      email: 'calvin@coolidge.com',
-      userName: 'Bobert',
-      password: 'secret',
-      role: 'Admin'
-    });
-  });
-
   beforeEach(() => {
     return mongoose.connection.dropDatabase();
   });
@@ -51,10 +40,17 @@ describe('app routes', () => {
       });
   });
 
-  it('can login a user', () => {
+  it('can login a user', async() => {
+    const admin = await User.create({
+      password: '1234',
+      userName: 'Bobert',
+      email: 'calvin@coolidge.com',
+      role: 'Admin',
+    });
+
     return request(app)
-      .post('api/v1/auth/login')
-      .send(admin)
+      .post('/api/v1/auth/login')
+      .send({ email: 'calvin@coolidge.com', password: '1234' })
       .then(res => {
         expect(res.body).toEqual({
           _id: admin.id,
