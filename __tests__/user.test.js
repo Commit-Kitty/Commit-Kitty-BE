@@ -98,7 +98,21 @@ describe('app routes', () => {
       });
   });
 
-  it()
+  it('via admin role only, can patch a dev user such that the role of the dev is updated to admin', async() => {
+    const userToChangeRole = await getUser({ role: 'Dev' });
+    return adminAgent
+      .patch(`/api/v1/auth/change-role/${userToChangeRole._id}`)
+      .send({ role: 'Admin' })
+      .then(res => {
+        expect(res.body).toEqual({
+          _id: userToChangeRole._id.toString(),
+          userName: userToChangeRole.userName,
+          email: userToChangeRole.email,
+          role: 'Admin',
+          __v: 0
+        });
+      });
+  });
 
 });
 
