@@ -90,6 +90,14 @@ describe('app routes', () => {
       });
   });
 
+  it('should log out a user', async() => {
+    return await devAgent
+      .post('/api/v1/auth/logout')
+      .then(res => {
+        expect(res.header['set-cookie'][0]).toEqual(expect.stringContaining('session=;'));
+      });
+  });
+
 
 
 });
