@@ -1,24 +1,9 @@
 require('dotenv').config();
-
+const { getUser, devAgent, adminAgent } = require('../lib/helpers/data-helpers');
 const request = require('supertest');
 const app = require('../lib/app');
-const connect = require('../lib/utils/connect');
-const mongoose = require('mongoose');
-const User = require('../lib/models/User');
 
 describe('app routes', () => {
-  beforeAll(() => {
-    connect();
-  });
-
-  beforeEach(() => {
-    return mongoose.connection.dropDatabase();
-  });
-
-  afterAll(() => {
-    return mongoose.connection.close();
-  });
-
   it('can signup a user', () => {
     return request(app)
       .post('/api/v1/auth/signup')
@@ -41,24 +26,22 @@ describe('app routes', () => {
   });
 
   it('can login a user', async() => {
-    const admin = await User.create({
-      password: '1234',
-      userName: 'Bobert',
-      email: 'calvin@coolidge.com',
-      role: 'Admin',
-    });
-
+    const user = await getUser(); 
+    // eslint-disable-next-line no-console
+    console.log('expecting Admin role because admins are seeded first in seed.js');
+    
     return request(app)
       .post('/api/v1/auth/login')
-      .send({ email: 'calvin@coolidge.com', password: '1234' })
+      .send({ email: user.email, password: 'password' })
       .then(res => {
         expect(res.body).toEqual({
-          _id: admin.id,
-          userName: 'Bobert',
-          email: 'calvin@coolidge.com',
+          _id: user._id,
+          userName: user.userName,
+          email: user.email,
           role: 'Admin',
           __v: 0
         });
       });
   });
+
 });
