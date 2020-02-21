@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1582322798590" clover="3.2.0">
-  <project timestamp="1582322798590" name="All files">
-    <metrics statements="76" coveredstatements="48" conditionals="11" coveredconditionals="1" methods="15" coveredmethods="8" elements="102" coveredelements="57" complexity="0" loc="76" ncloc="76" packages="6" files="7" classes="7"/>
+<coverage generated="1582323669959" clover="3.2.0">
+  <project timestamp="1582323669959" name="All files">
+    <metrics statements="78" coveredstatements="50" conditionals="11" coveredconditionals="1" methods="15" coveredmethods="8" elements="104" coveredelements="59" complexity="0" loc="78" ncloc="78" packages="6" files="8" classes="8"/>
     <package name="lib">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="app.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-BE/lib/app.js">
@@ -71,23 +71,28 @@
       </file>
     </package>
     <package name="lib.routes">
-      <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="callback.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-BE/lib/routes/callback.js">
-        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
+      </file>
+      <file name="callbackUtils.js" path="/Users/joelpatrickdurham/alchemy/career-track/commit-kitty/Commit-Kitty-BE/lib/routes/callbackUtils.js">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
       </file>
     </package>
     <package name="lib.services">

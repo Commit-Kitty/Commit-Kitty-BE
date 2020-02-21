@@ -22,7 +22,7 @@ describe('app routes', () => {
     await request(app)
       .get('/api/v1/callback')
       .then(res => {
-        expect(res.text).toEqual('We made it!');
+        expect(res.text).toEqual(expect.any(String));
       });
   });
 });
