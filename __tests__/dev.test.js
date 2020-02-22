@@ -26,7 +26,7 @@ describe('tests of dev model routes', () => {
     const dev = await getDev();
 
     return devAgent
-      .post(`/api/v1/dev/${dev._id}`)
+      .get(`/api/v1/dev/${dev._id}`)
       .send({
         devName: dev.devName,
         devGitHubHandle: dev.devGitHubHandle,
