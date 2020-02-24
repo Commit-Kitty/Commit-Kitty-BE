@@ -69,5 +69,24 @@ describe('tests of group model routes', () => {
       });
   });
 
+  it('via admin role only, can .put a group such that a Dev is removed from devsInGroup', async() => {
+    const devToRemove = await getDev({ devGitHubHandle: '@devHandle1' });
+    const admin = await getUser({ email: 'admin0@tess.com' });
+    const group = await getGroup({ groupName: 'groupName0' });
+
+    return adminAgent
+      .put(`/api/v1/group/remove-dev/${group._id}`)
+      .send({ devsInGroup: devToRemove._id })
+      .then(res => {
+        expect(res.body).toEqual({
+          _id: group._id.toString(),
+          groupName: group.groupName,
+          adminIds: [admin._id.toString()],
+          devsInGroup: [group.devsInGroup[0]],
+          __v: 0
+        });
+      });
+  });
+
 
 });
