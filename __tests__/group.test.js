@@ -50,5 +50,24 @@ describe('tests of group model routes', () => {
       });
   });
 
+  it('via admin role only, can patch a group such that a Dev is added to devsInGroup', async() => {
+    const devToAddToGroup = await getDev({ devGitHubHandle: '@devHandle3' });
+    const admin = await getUser({ email: 'admin0@tess.com' });
+    const group = await getGroup({ groupName: 'groupName0' });
+
+    return adminAgent
+      .patch(`/api/v1/auth/add-dev/${group._id}`)
+      .send({ devsInGroup: [devToAddToGroup._id] })
+      .then(res => {
+        expect(res.body).toEqual({
+          _id: group._id.toString(),
+          groupName: group.groupName,
+          adminIds: [admin._id.toString()],
+          devsInGroup: [group.devsInGroup[0]._id, group.devsInGroup[1]._id],
+          __v: 0
+        });
+      });
+  });
+
 
 });
