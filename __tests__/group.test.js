@@ -56,14 +56,14 @@ describe('tests of group model routes', () => {
     const group = await getGroup({ groupName: 'groupName0' });
 
     return adminAgent
-      .patch(`/api/v1/auth/add-dev/${group._id}`)
-      .send({ devsInGroup: [devToAddToGroup._id] })
+      .patch(`/api/v1/group/add-dev/${group._id}`)
+      .send({ devsInGroup: devToAddToGroup._id })
       .then(res => {
         expect(res.body).toEqual({
           _id: group._id.toString(),
           groupName: group.groupName,
           adminIds: [admin._id.toString()],
-          devsInGroup: [group.devsInGroup[0]._id, group.devsInGroup[1]._id],
+          devsInGroup: [group.devsInGroup[0], group.devsInGroup[1], devToAddToGroup._id],
           __v: 0
         });
       });
