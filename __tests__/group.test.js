@@ -104,7 +104,21 @@ describe('tests of group model routes', () => {
               _id: group._id.toString(),
               groupName: group.groupName,
               adminIds: [admin._id.toString()],
-              devsInGroup: [group.devsInGroup[0], group.devsInGroup[1]],
+              devsInGroup: [
+                {
+                  __v: 0,
+                  _id: expect.any(String),
+                  devGitHubHandle: '@devHandle0',
+                  devName: 'great dev name'
+                },
+                {
+                  __v: 0,
+                  _id: expect.any(String),
+                  devGitHubHandle: '@devHandle1',
+                  devName: 'great dev name',
+
+                }
+              ],
               __v: 0
             }]);
           }
