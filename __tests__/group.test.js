@@ -88,5 +88,30 @@ describe('tests of group model routes', () => {
       });
   });
 
+  it('via admin role only, can get a group by Admin id', async() => {
+    const notOurTestAdmin = await getUser({ email: 'admin1@tess.com' });
+    const admin = await getUser({ email: 'admin0@tess.com' });
+    
+    const groupWithOurAdmin = await getGroup({ adminIds: [admin._id] });
+    const allGroups = [groupWithOurAdmin, await getGroup({ adminIds: [notOurTestAdmin._id] })];
+
+    return adminAgent
+      .get(`/api/v1/group/groups-by-admin/${admin._id}`)
+      .then(res => {
+        allGroups.forEach(group => {
+          if(group.adminIds.includes(admin._id)) {
+            expect(res.body).toEqual([{
+              _id: group._id.toString(),
+              groupName: group.groupName,
+              adminIds: [admin._id.toString()],
+              devsInGroup: [group.devsInGroup[0], group.devsInGroup[1]],
+              __v: 0
+            }]);
+          }
+
+        });
+      });
+  });
+
 
 });
