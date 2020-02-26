@@ -109,13 +109,13 @@ describe('tests of group model routes', () => {
                   __v: 0,
                   _id: expect.any(String),
                   devGitHubHandle: '@devHandle0',
-                  devName: 'great dev name'
+                  devName: 'great dev name 0'
                 },
                 {
                   __v: 0,
                   _id: expect.any(String),
                   devGitHubHandle: '@devHandle1',
-                  devName: 'great dev name',
+                  devName: 'great dev name 1',
 
                 }
               ],

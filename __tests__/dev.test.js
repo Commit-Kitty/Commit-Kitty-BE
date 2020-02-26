@@ -27,10 +27,6 @@ describe('tests of dev model routes', () => {
 
     return devAgent
       .get(`/api/v1/dev/${dev._id}`)
-      .send({
-        devName: dev.devName,
-        devGitHubHandle: dev.devGitHubHandle,
-      })
       .then(res => {
         expect(res.body).toEqual({
           _id: expect.any(String),
@@ -38,6 +34,36 @@ describe('tests of dev model routes', () => {
           devGitHubHandle: dev.devGitHubHandle,
           __v: 0
         });
+      });
+  });
+
+  it('can get a dev by the devName with ensureAuth only (either Dev or Admin)', async() => {
+    const dev = await getDev({ devName: 'great dev name 0' });
+
+    return devAgent
+      .get(`/api/v1/dev/dev-name/${dev.devName}`)
+      .then(res => {
+        expect(res.body).toEqual([{
+          _id: expect.any(String),
+          devName: dev.devName,
+          devGitHubHandle: dev.devGitHubHandle,
+          __v: 0
+        }]);
+      });
+  });
+
+  it('can get a dev by the gitHubHandle with ensureAuth only (either Dev or Admin)', async() => {
+    const dev = await getDev({ devGitHubHandle: '@devHandle0' });
+
+    return devAgent
+      .get(`/api/v1/dev/dev-handle/${dev.devGitHubHandle}`)
+      .then(res => {
+        expect(res.body).toEqual([{
+          _id: expect.any(String),
+          devName: dev.devName,
+          devGitHubHandle: dev.devGitHubHandle,
+          __v: 0
+        }]);
       });
   });
   
