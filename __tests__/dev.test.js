@@ -38,7 +38,7 @@ describe('tests of dev model routes', () => {
   });
 
   it('can get a dev by the devName with ensureAuth only (either Dev or Admin)', async() => {
-    const dev = await getDev({ devName: 'great dev name 0' });
+    const dev = await getDev({ devName: 'great dev name 2' });
 
     return devAgent
       .get(`/api/v1/dev/dev-name/${dev.devName}`)
@@ -53,7 +53,7 @@ describe('tests of dev model routes', () => {
   });
 
   it('can get a dev by the gitHubHandle with ensureAuth only (either Dev or Admin)', async() => {
-    const dev = await getDev({ devGitHubHandle: '@devHandle0' });
+    const dev = await getDev({ devGitHubHandle: '@devHandle2' });
 
     return devAgent
       .get(`/api/v1/dev/dev-handle/${dev.devGitHubHandle}`)
