@@ -27,10 +27,21 @@ describe('tests of dev model routes', () => {
 
     return devAgent
       .get(`/api/v1/dev/${dev._id}`)
-      .send({
-        devName: dev.devName,
-        devGitHubHandle: dev.devGitHubHandle,
-      })
+      .then(res => {
+        expect(res.body).toEqual({
+          _id: expect.any(String),
+          devName: dev.devName,
+          devGitHubHandle: dev.devGitHubHandle,
+          __v: 0
+        });
+      });
+  });
+
+  it('can get a dev by the devName with ensureAuth only (either Dev or Admin)', async() => {
+    const dev = await getDev();
+
+    return devAgent
+      .get(`/api/v1/dev/${dev.devName}`)
       .then(res => {
         expect(res.body).toEqual({
           _id: expect.any(String),
